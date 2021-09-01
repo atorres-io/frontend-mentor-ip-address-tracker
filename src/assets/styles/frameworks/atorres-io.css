@@ -11,6 +11,7 @@
 	vertical-align: baseline;
 	font-size: 100%;
 	font-family: 'Rubik', sans-serif;
+	font-weight: 400; /* 500, 700 */
 }
 
 /* ====================
@@ -30,7 +31,7 @@ img {
 	text-align: center;
 }
 
-:is(button, select, input, input:disabled) {
+:is(button, select, input) {
 	appearance: none;
 	-webkit-appearance: none;
 }
