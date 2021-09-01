@@ -1,0 +1,22 @@
+html {
+	box-sizing: border-box;
+	background: var(--color-app);
+	scroll-behavior: smooth;
+	-webkit-tap-highlight-color: transparent;
+}
+
+body {
+	width: 100%;
+	height: auto;
+	min-height: 100vh;
+	background-color: transparent;
+	font-size: 16px;
+	padding: 0 var(--white-space);
+}
+
+div[id='root'] {
+	width: 100%;
+	height: auto;
+	min-height: 100vh;
+	background-color: transparent;
+}
