@@ -12,3 +12,9 @@ ReactDOM.render(
 );
 
 reportWebVitals();
+
+/*
+L.tileLayer('https://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png', {
+	maxZoom: 18,
+	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+});*/

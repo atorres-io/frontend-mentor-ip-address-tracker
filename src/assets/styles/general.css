@@ -7,16 +7,13 @@ html {
 
 body {
 	width: 100%;
-	height: auto;
-	min-height: 100vh;
+	height: 100vh;
 	background-color: transparent;
-	font-size: 16px;
-	padding: 0 var(--white-space);
+	font-size: 18px;
 }
 
 div[id='root'] {
 	width: 100%;
-	height: auto;
-	min-height: 100vh;
+	height: 100%;
 	background-color: transparent;
 }
