@@ -5,31 +5,38 @@ import './Main.css';
 import 'leaflet/dist/leaflet.css';
 import { MapContainer, TileLayer } from 'react-leaflet';
 
-//* Utils
+//* Services
 import {
 	preferDarkScheme,
 	DARK_MAP,
 	LIGHT_MAP,
-} from '../../utils/SchemeService';
+} from '../../services/SchemeService';
+import { getGeoDatas } from '../../services/GeoService';
 
-function Main(props) {
-	const data = props.data;
+function Main() {
 	const [url, setUrl] = useState('');
+	const [center, setCenter] = useState({ lat: 50.5, lng: 30.5 });
+	const [loading, setLoading] = useState(true);
 
 	useEffect(() => {
 		setUrl(preferDarkScheme ? DARK_MAP : LIGHT_MAP);
-		console.log(data);
-	}, [data]);
+		const updateCenter = async () => {
+			const center = await getGeoDatas();
+			setCenter(center);
+			setLoading(false);
+		};
+		updateCenter();
+	}, []);
 
 	return (
 		<main>
-			<MapContainer
-				center={[36.719865, -4.462333]}
-				zoom={15}
-				zoomControl={false}
-			>
-				<TileLayer url={url} />
-			</MapContainer>
+			{loading ? (
+				'loading...'
+			) : (
+				<MapContainer center={center} zoom={15} zoomControl={false}>
+					<TileLayer url={url} />
+				</MapContainer>
+			)}
 		</main>
 	);
 }
