@@ -1,9 +1,10 @@
 {
-	"name": "frontend-mentor-ip-address-tracker",
 	"version": "0.1.0",
-	"private": true,
-	"author": "Alejandro Torres",
+	"name": "frontend-mentor-ip-address-tracker",
 	"description": "Frontend Mentor challenge on an app",
+	"author": "Alejandro Torres",
+	"private": "false",
+	"license": "MIT",
 	"keywords": [
 		"react",
 		"javascript",
@@ -11,24 +12,25 @@
 		"grid-layout",
 		"flexbox",
 		"api",
-		"frontend-mentor-challenges"
+		"frontend-mentor-challenges",
+		"prettier"
 	],
 	"dependencies": {
-		"@testing-library/jest-dom": "^5.14.1",
-		"@testing-library/react": "^11.2.7",
-		"@testing-library/user-event": "^12.8.3",
-		"leaflet": "^1.7.1",
-		"react": "^17.0.2",
-		"react-dom": "^17.0.2",
-		"react-leaflet": "^3.2.1",
-		"react-scripts": "4.0.3",
-		"web-vitals": "^1.1.2"
+		"leaflet": "1.7.1",
+		"react": "17.0.2",
+		"react-dom": "17.0.2",
+		"react-leaflet": "3.2.5",
+		"react-router-dom": "6.2.1",
+		"react-scripts": "5.0.0",
+		"shortid": "2.2.16",
+		"web-vitals": "2.1.3"
+	},
+	"devDependencies": {
+		"prettier": "2.5.1"
 	},
 	"scripts": {
 		"start": "react-scripts start",
-		"build": "react-scripts build",
-		"test": "react-scripts test",
-		"eject": "react-scripts eject"
+		"build": "react-scripts build"
 	},
 	"eslintConfig": {
 		"extends": [
@@ -36,9 +38,16 @@
 			"react-app/jest"
 		]
 	},
-	"browserslist": [
-		">0.2%",
-		"not dead",
-		"not op_mini all"
-	]
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	}
 }
