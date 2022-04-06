@@ -30,6 +30,9 @@ Users should be able to:
 
 ### Screenshot
 
+<img src='./src/assets/images/final/desktop.png' width='640px' alt='Desktop Design' />
+<img src='./src/assets/images/final/mobile.png' width='640px' alt='Mobile Design' />
+
 ### Links
 
 - Solution URL: [Github URL](https://github.com/atorres-io/frontend-mentor-ip-address-tracker)
@@ -39,6 +42,7 @@ Users should be able to:
 
 ### Built with
 
+- Prettier
 - JavaScript
 - Clean Code
 - API
@@ -46,6 +50,10 @@ Users should be able to:
 - CSS Grid
 - Responsive
 - [React](https://reactjs.org/) - JS library
+
+### What I learned
+
+Using IpAdress API and react-leaflet.
 
 ## Author
 
