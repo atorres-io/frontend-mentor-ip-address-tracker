@@ -4,9 +4,6 @@ import './Main.css';
 //* External Packages
 import 'leaflet/dist/leaflet.css';
 import { MapContainer, TileLayer } from 'react-leaflet';
-import L, { icon } from 'leaflet';
-import MarkerIcon from '../../assets/images/marker-icon.png';
-import ShadowIcon from '../../assets/images/marker-shadow.png';
 
 //* Services
 import {
@@ -15,17 +12,6 @@ import {
 	LIGHT_MAP,
 } from '../../services/SchemeService';
 import { getGeoDatas } from '../../services/GeoService';
-
-const iconCustom = icon({
-	iconUrl: MarkerIcon,
-	shadowUrl: ShadowIcon,
-	iconSize: [25, 41],
-	iconAnchor: [12, 41],
-	popupAnchor: [1, -34],
-	tooltipAnchor: [16, -28],
-	shadowSize: [41, 41],
-});
-L.Marker.prototype.options.icon = iconCustom;
 
 function Main() {
 	const [url, setUrl] = useState('');

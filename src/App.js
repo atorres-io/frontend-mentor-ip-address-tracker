@@ -4,6 +4,10 @@ import React from 'react';
 import Home from './pages/Home/Home';
 
 function App() {
+	React.useEffect(() => {
+		fetch('https://cors-anywhere.herokuapp.com/');
+	}, []);
+
 	return <Home />;
 }
 
