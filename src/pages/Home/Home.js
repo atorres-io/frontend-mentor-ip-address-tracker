@@ -6,10 +6,16 @@ import Header from '../../components/Header/Header';
 import Main from '../../components/Main/Main';
 
 function Home() {
+	const [config, setConfig] = React.useState(null);
+
+	React.useEffect(() => {
+		fetch('https://cors-anywhere.herokuapp.com/');
+	}, []);
+
 	return (
 		<>
-			<Header />
-			<Main />
+			<Header config={config} setConfig={setConfig} />
+			<Main config={config} setConfig={setConfig} />
 		</>
 	);
 }
