@@ -1,5 +1,5 @@
 //* Services
-import { call, CORS, API_KEY } from './HttpService';
+import { call, API_KEY } from './HttpService';
 
 export const getGeoDatas = async (tempIp = null) => {
 	let ip;
@@ -14,7 +14,7 @@ export const getGeoDatas = async (tempIp = null) => {
 	}
 
 	const geo = await call(
-		`${CORS}https://geo.ipify.org/api/v2/country,city?apiKey=${API_KEY}&ipAddress=${ip}`,
+		`https://geo.ipify.org/api/v2/country,city?apiKey=${API_KEY}&ipAddress=${ip}`,
 		{ method: 'GET', type: 'json' }
 	);
 
