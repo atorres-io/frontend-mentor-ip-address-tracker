@@ -11,5 +11,4 @@ export const call = async (url, { method, type, body }) => {
 	return type === 'text' ? await response.text() : await response.json();
 };
 
-export const CORS = 'https://cors-anywhere.herokuapp.com/';
 export const API_KEY = 'at_XutrWCJhSHpANbD3ArkbSyvuGU0kI'; //... Set your api key so that the app works
